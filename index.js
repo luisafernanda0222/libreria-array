@@ -1,5 +1,5 @@
 
-let libro = titulo= method=[{
+let method =[{
     titulo: "El señor de los anllos",
     autor:"Tolkien",
     genero:"literatura fantastica",
@@ -347,9 +347,9 @@ let libro = titulo= method=[{
 },
 ]
 
-libro.push(libro);
-libro.pop(libro);
-console.log(libro);
+method.push(method);
+method.pop(method);
+console.log(method);
 
 let libros= ["Libro 1", "Libro 2", "Libro 3","Libro 4","Libro 5","Libro 6","Libro 7","Libro 8","Libro 9","Libro 10", "Libro 11","Libro 12","Libro 13","Libro 14","Libro 15","Libro 16","Libro 17", "Libro 18", "Libro 19"]; 
 
@@ -371,7 +371,7 @@ let nuevoLibro ={
     peso: "0.55 kg"
 }
 
-libro.push(nuevoLibro); 
+method.push(nuevoLibro); 
 
 
 libros.pop();
@@ -539,7 +539,9 @@ const LibrosCaros=method
     return{
     titulo: titulo.titulo,
     autor: titulo.autor,
+    editorial:titulo. editorial,
     precio: titulo.precio,
+    descuento:titulo.descuento
 };
 })
 
@@ -557,7 +559,8 @@ const iteraciones=method.map((libro)=>{
     paginas: libro.paginas,
  };
 });
-console.log(iteraciones);
+
+
 
 
 const LibroMayorPaginas=method.sort(
@@ -589,37 +592,166 @@ const LibrosCarosTitulo=method
 
 });
 
+const librosMenosDe100=method.filter((method)=>{
+    return method.paginas<100;
+})
 
+.map ((titulo)=>{
+    return{
+    titulo:titulo.titulo,
+    autor: titulo.autor,
+    editorial: titulo.editorial,
+    paginas: titulo.paginas
+};
+
+});
+
+
+const libroMayorMenor=method.filter((libro)=>{
+    return libro.precio>50;
+})
+
+.map((libro)=>{
+    return{
+    titulo:libro.titulo,
+    autor:libro.autor,
+    precio:libro.precio
+
+};
+});
+
+
+
+
+let algunLibro =method.find((libro)=>{
+
+    return libro.titulo==="La Odisea";
+
+});
+
+
+let algunAutor =method.find((autor)=>{
+
+    return autor.autor==="Eurípides";
+    
+});
+
+let algunaFecha =method.find((libro)=>{
+
+    return libro.fecha_publicacion ==="500 a.c";
+    
+});
+
+let algunGenero =method.find((libro)=>{
+
+    return libro.genero ==="tragedia";
+    
+});
+
+let algunIdioma =method.find((libro)=>{
+
+    return libro.idioma ==="griego antiguo";
+    
+});
+
+let algunPrecio=method.find((libro)=>{
+
+    return libro.precio ==="12.990";
+    
+});
+
+let algunFormato=method.find((libro)=>{
+
+    return libro.formato ==="tapa dura";
+    
+});
+
+let algunaUbicacion=method.find((libro)=>{
+
+    return libro.ubicacion ==="Librería El Péndulo";
+    
+});
+
+let algunPeso=method.find((libro)=>{
+
+    return libro.peso ==="2,42 kg";
+    
+});
+
+
+let algunEstado=method.find((libro)=>{
+
+    return libro.estado ==="nuevo";
+    
+});
+
+let algunIsbn=method.find((libro)=>{
+
+    return libro.isbn ==="9788467034487";
+    
+});
+ 
+let algunaDescripcion=method.find((libro)=>{
+
+    return libro.descripcion ==="La historia de la familia Trueba en un país latinoamericano";
+    
+});
+
+let algunaDimensiones=method.find((libro)=>{
+
+    return libro.dimensiones ==="12 x 18 cm";
+    
+});
+
+let algunosEstados=method.find((libro)=>{
+
+    return libro.estado ==="nuevo";
+    
+});
+
+let algunasPaginas=method.find((libro)=>{
+
+    return libro.paginas ==="190";
+    
+});
 
 
 function mostrarMenu(){
-    console.log("seleccione una opcion");
-    console.log("1.mostrar pila de libros");
-    console.log("2.quitarlibro");
-    console.log("3.listar los libros en 10 iiteraciones diferentes");
+    console.log("SELLECCIONE UNA OPCION:");
+    console.log("1.libros en el cual tengas 5 libros por una editorial específica.");
+    console.log("2. listar los libros por Titulo, Autor, Editorial y Precio");
+    console.log("3.10 iteraciones diferentes manteniendo el atributo Titulo");
     console.log("4.libros por descuento");
-    console.log("5.libro mayor a $50.000");
-    console.log("6. libro mas alto de paginas");
-    console.log("7.libros mayor a menor de paginas");
-    console.log("8.libros caros mayores a 50.000");
-    console.log("9.libros menor de 200 paginas");
-    console.log("10. libro mayores a 100.000");
-    console.log("11. salir ");
+    console.log("5.libros por Titulo, Autor, Editorial, Precio y descuento.");
+    console.log("6. libros que tengan un precio mayor a 42 ");
+    console.log("7. libros por numero mas alto de paginas mostrando, titulo, autor, editorial, paginas");
+    console.log("8. libros por numero de paginas de mayor a menor");
+    console.log("9.Obtener un array de libros caros por titulo mayores de 11 dolares, resumirlos por titulo, autor, precio.");
+    console.log("10. libros que tengan menos de 100 paginas resumirlos por titulo, autor, editorial y paginas.");
+    console.log("11. Realizar un resumen de libros caros mayores a 50 dolares de mayor a menor resumirlos por titulo, autor, precio.");
+    console.log("12.Buscar un objeto del array por titulo.");
+    console.log("13.Buscar un objeto del array por autor.");
+    console.log("14.Buscar un objeto del array por fecha de publicación.");
+    console.log("15.Buscar un objeto del array por genero.");
+    console.log("16.Buscar un objeto del array por idioma.");
+    console.log("17. 10 iteraciones diferentes de búsqueda de libros en el sistema..");
+    console.log("18.salir .");
 
 
-opccion =prompt("seleccione una opcion (1-11): \n" + "1.agregar un libro \n" + "2.quitarlibro \n" + "3.listar los libros en 10 iiteraciones diferentes \n" + "4.libros por descuento \n" + "5.libro mayor a $50.000 \n" + "6. libro mas alto de paginas \n" + "7.libros mayor a menor de paginas \n" + "8.libros caros mayores a 50.000 \n" + "9.libros menor de 200 paginas \n" + "10. libro mayores a 100.000 \n" + "11. salir \n");
+
+opccion =prompt("seleccione una opcion (1-18): \n" + "1.libros en el cual tengas 5 libros por una editorial específica.\n" + "2. listar los libros por Titulo, Autor, Editorial y Precio \n" + "3.10 iteraciones diferentes manteniendo el atributo Titulo \n" + "4.libros por descuento \n" + "5.libros por Titulo, Autor, Editorial, Precio y descuento. \n" + "6. libros que tengan un precio mayor a 50 dolares \n" + "7.libros por numero mas alto de paginas mostrando, titulo, autor, editorial, paginas \n"+ "8.libros por numero de paginas de mayor a menor \n" + "9.Obtener un array de libros caros por titulo mayores de 11 dolares, resumirlos por titulo, autor, precio. \n" + "10. libros que tengan menos de 100 paginas resumirlos por titulo, autor, editorial y paginas.\n" +"11. Realizar un resumen de libros caros mayores a 50 dolares de mayor a menor resumirlos por titulo, autor, precio.\n" + "12.Buscar un objeto del array por titulo.\n" + "13.Buscar un objeto del array por autor.\n" +"14.Buscar un objeto del array por fecha de publicación.\n" + "15.Buscar un objeto del array por genero.\n" + "16.Buscar un objeto del array por idioma.\n" + "17. 10 iteraciones diferentes de búsqueda de libros en el sistema.\n " + "18.salir .\n" );
 
 switch (opccion){
-    case "1":
-        console.log(libro);
-        break;
-
-   case "2":
+  
+   case "1":
     console.log(libros);
     break;
 
-    case"3":
+    case "2":
     console.table(titulos);
+    break;
+
+    case"3":
     console.table(titulos2);
     console.table(titulos3);
     console.table(titulos4);
@@ -641,15 +773,63 @@ switch (opccion){
         break;
 
     case "6":
-    console.log(LibroMayorPaginas); 
+   console.table(LibrosCarosTitulo);
     break;
 
     case "7":
-        console.table(LibrosCarosTitulo);
-}
+    console.log(iteraciones); 
+    break;
 
+    case "8":
+    console.log(LibroMayorPaginas); 
+    break;
 
-} 
+    case "9":
+    console.log(LibrosCarosTitulo); 
+    break;
+
+    case "10":
+    console.table(librosMenosDe100);
+    break;
+
+    case "11":
+    console.table(libroMayorMenor)
+    break;
+
+    case "12":
+    console.table(algunLibro);
+    break;
+
+    case "13":
+    console.table(algunAutor);
+    break;
+
+    case "14":
+    console.table(algunaFecha);
+    break;
+
+    case "15":
+    console.table(algunGenero);
+    break;
+
+    case "16":
+    console.table(algunIdioma);
+    break;
+
+    case "17":
+    console.table(algunPrecio);
+    console.table( algunFormato);
+    console.table(algunaUbicacion);
+    console.table(algunPeso);
+    console.table(algunIsbn);
+    console.table(algunaDescripcion);
+    console.table(algunaDimensiones);
+    console.table(algunosEstados);
+    console.table(algunasPaginas);
+    console.log(algunEstado);
+    break;
+}} 
 
 mostrarMenu()
+
 
