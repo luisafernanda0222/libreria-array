@@ -346,7 +346,7 @@ let method =[{
     peso: "0.40 kg"
 },
 ]
-
+//Modifica el array de libros en el cual tengas 5 libros por una editorial específica.
 method.push(method);
 method.pop(method);
 console.log(method);
@@ -376,6 +376,7 @@ method.push(nuevoLibro);
 
 libros.pop();
 
+//Realizar uso del array Method .map y listar los libros por Titulo, Autor, Editorial y Precio
 
 
 
@@ -390,7 +391,7 @@ const titulos=method.map((libro)=>{
 
 });
 
-
+// Crear 10 iteraciones diferentes manteniendo el atributo Titulo
 
 const titulos2=method.map((libro)=>{
 
@@ -512,6 +513,7 @@ const titulos11=method.map((libro)=>{
 
 });
 
+//l array de objetos creado se debe agregar un atributo llamado descuento al cual tiene un valor del 20 porciento.
 
 
 
@@ -524,7 +526,7 @@ const LibrosDescuentos=method.map((libro)=>{
  };
 });
 
-
+//Obtener un array con los libros que tengan un precio mayor a 50 dolares
 
 
 const LibrosCaros=method
@@ -533,6 +535,9 @@ const LibrosCaros=method
     return libro.precio > 50;
 
 })
+
+// Listar los libros por Titulo, Autor, Editorial, Precio y descuento. 
+
 
 .map((titulo) => {
 
@@ -548,6 +553,7 @@ const LibrosCaros=method
 .sort((a,b)=>b.precio-a.precio);
 
 
+//Realizar un array con el resumen de libros por numero mas alto de paginas mostrando, titulo, autor, editorial, paginas
 
 
 const iteraciones=method.map((libro)=>{
@@ -561,7 +567,7 @@ const iteraciones=method.map((libro)=>{
 });
 
 
-
+// Ordenar los libros por numero de paginas de mayor a menor
 
 const LibroMayorPaginas=method.sort(
 
@@ -571,7 +577,7 @@ const LibroMayorPaginas=method.sort(
 );
 
 
-
+//Obtener un array de libros caros por titulo mayores de 11 dolares, resumirlos por titulo, autor, precio.
 
 
 const LibrosCarosTitulo=method
@@ -592,6 +598,9 @@ const LibrosCarosTitulo=method
 
 });
 
+//Realiza un resumen de libros que tengan menos de 100 paginas resumirlos por titulo, autor, editorial y paginas.
+
+
 const librosMenosDe100=method.filter((method)=>{
     return method.paginas<100;
 })
@@ -605,6 +614,9 @@ const librosMenosDe100=method.filter((method)=>{
 };
 
 });
+
+//Realizar un resumen de libros caros mayores a -- dolares de mayor a menor resumirlos por titulo, autor, precio.
+
 
 
 const libroMayorMenor=method.filter((libro)=>{
@@ -620,6 +632,7 @@ const libroMayorMenor=method.filter((libro)=>{
 };
 });
 
+//Buscar un objeto del array por titulo.
 
 
 
@@ -630,11 +643,16 @@ let algunLibro =method.find((libro)=>{
 });
 
 
+//Buscar un objeto del array por autor.
+
 let algunAutor =method.find((autor)=>{
 
     return autor.autor==="Eurípides";
     
 });
+
+//Buscar un objeto del array por fecha de publicación.
+
 
 let algunaFecha =method.find((libro)=>{
 
@@ -642,17 +660,23 @@ let algunaFecha =method.find((libro)=>{
     
 });
 
+//Buscar un objeto del array por genero.
+
 let algunGenero =method.find((libro)=>{
 
     return libro.genero ==="tragedia";
     
 });
 
+//Buscar un objeto del array por idioma
+
 let algunIdioma =method.find((libro)=>{
 
     return libro.idioma ==="griego antiguo";
     
 });
+
+//Crear 10 iteraciones diferentes de búsqueda de libros en el sistema.
 
 let algunPrecio=method.find((libro)=>{
 
@@ -761,7 +785,6 @@ switch (opccion){
     console.table(titulos8);
     console.table(titulos9);
     console.table(titulos10);
-    console.table(titulo11);
     break;
 
  case "4":
