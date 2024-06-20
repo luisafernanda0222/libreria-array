@@ -379,7 +379,6 @@ libros.pop();
 //Realizar uso del array Method .map y listar los libros por Titulo, Autor, Editorial y Precio
 
 
-
 const titulos=method.map((libro)=>{
 
     return{
@@ -550,8 +549,6 @@ const LibrosCaros=method
 };
 })
 
-.sort((a,b)=>b.precio-a.precio);
-
 
 //Realizar un array con el resumen de libros por numero mas alto de paginas mostrando, titulo, autor, editorial, paginas
 
@@ -577,7 +574,7 @@ const LibroMayorPaginas=method.sort(
 );
 
 
-//Obtener un array de libros caros por titulo mayores de 11 dolares, resumirlos por titulo, autor, precio.
+//Obtener un array de libros caros por titulo mayores de 42 dolares, resumirlos por titulo, autor, precio.
 
 
 const LibrosCarosTitulo=method
@@ -615,7 +612,7 @@ const librosMenosDe100=method.filter((method)=>{
 
 });
 
-//Realizar un resumen de libros caros mayores a -- dolares de mayor a menor resumirlos por titulo, autor, precio.
+//Realizar un resumen de libros caros mayores a 50 dolares de mayor a menor resumirlos por titulo, autor, precio.
 
 
 
@@ -750,7 +747,7 @@ function mostrarMenu(){
     console.log("6. libros que tengan un precio mayor a 42 ");
     console.log("7. libros por numero mas alto de paginas mostrando, titulo, autor, editorial, paginas");
     console.log("8. libros por numero de paginas de mayor a menor");
-    console.log("9.Obtener un array de libros caros por titulo mayores de 11 dolares, resumirlos por titulo, autor, precio.");
+    console.log("9.Obtener un array de libros caros por titulo mayores de 42 dolares, resumirlos por titulo, autor, precio.");
     console.log("10. libros que tengan menos de 100 paginas resumirlos por titulo, autor, editorial y paginas.");
     console.log("11. Realizar un resumen de libros caros mayores a 50 dolares de mayor a menor resumirlos por titulo, autor, precio.");
     console.log("12.Buscar un objeto del array por titulo.");
@@ -763,7 +760,7 @@ function mostrarMenu(){
 
 
 
-opccion =prompt("seleccione una opcion (1-18): \n" + "1.libros en el cual tengas 5 libros por una editorial específica.\n" + "2. listar los libros por Titulo, Autor, Editorial y Precio \n" + "3.10 iteraciones diferentes manteniendo el atributo Titulo \n" + "4.libros por descuento \n" + "5.libros por Titulo, Autor, Editorial, Precio y descuento. \n" + "6. libros que tengan un precio mayor a 50 dolares \n" + "7.libros por numero mas alto de paginas mostrando, titulo, autor, editorial, paginas \n"+ "8.libros por numero de paginas de mayor a menor \n" + "9.Obtener un array de libros caros por titulo mayores de 11 dolares, resumirlos por titulo, autor, precio. \n" + "10. libros que tengan menos de 100 paginas resumirlos por titulo, autor, editorial y paginas.\n" +"11. Realizar un resumen de libros caros mayores a 50 dolares de mayor a menor resumirlos por titulo, autor, precio.\n" + "12.Buscar un objeto del array por titulo.\n" + "13.Buscar un objeto del array por autor.\n" +"14.Buscar un objeto del array por fecha de publicación.\n" + "15.Buscar un objeto del array por genero.\n" + "16.Buscar un objeto del array por idioma.\n" + "17. 10 iteraciones diferentes de búsqueda de libros en el sistema.\n " + "18.salir .\n" );
+opccion =prompt("seleccione una opcion (1-18): \n" + "1.libros en el cual tengas 5 libros por una editorial específica.\n" + "2. listar los libros por Titulo, Autor, Editorial y Precio \n" + "3.10 iteraciones diferentes manteniendo el atributo Titulo \n" + "4.libros por descuento \n" + "5.libros por Titulo, Autor, Editorial, Precio y descuento. \n" + "6. libros que tengan un precio mayor a 50 dolares \n" + "7.libros por numero mas alto de paginas mostrando, titulo, autor, editorial, paginas \n"+ "8.libros por numero de paginas de mayor a menor \n" + "9.Obtener un array de libros caros por titulo mayores de 42 dolares, resumirlos por titulo, autor, precio. \n" + "10. libros que tengan menos de 100 paginas resumirlos por titulo, autor, editorial y paginas.\n" +"11. Realizar un resumen de libros caros mayores a 50 dolares de mayor a menor resumirlos por titulo, autor, precio.\n" + "12.Buscar un objeto del array por titulo.\n" + "13.Buscar un objeto del array por autor.\n" +"14.Buscar un objeto del array por fecha de publicación.\n" + "15.Buscar un objeto del array por genero.\n" + "16.Buscar un objeto del array por idioma.\n" + "17. 10 iteraciones diferentes de búsqueda de libros en el sistema.\n " + "18.salir .\n" );
 
 switch (opccion){
   
